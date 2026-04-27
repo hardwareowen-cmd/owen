@@ -1,5 +1,5 @@
 from flask import Flask, render_template, flash, redirect, url_for, session, request
-from from flask_bootstrap import Bootstrap5
+from flask_bootstrap import Bootstrap5
 from flask_login import login_required, current_user, LoginManager, login_user, logout_user
 from extentions import db, bcrypt
 from wrapper import role_required
