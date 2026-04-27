@@ -3,5 +3,5 @@ Flask-SQLAlchemy==3.0.5
 Flask-Login==0.6.2
 Flask-Bcrypt==1.0.1
 Flask-WTF==1.1.1
-Flask-Bootstrap==3.3.7.1
+bootstrap-flask==2.5.0
 WTForms==3.0.1
