@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %} Add New Account {% endblock %}
+
+{% block content %}
+<div class="formBackground" style="background-image: url(static/FarmLand.jpg)">
+    <div class="formPage">
+        <h1>Add New account</h1>
+        <div class="d-grid gap-2">
+            <a class="btn btn-success btn-lg" href="/addFarmer" role="button">Farmer</a>
+            <a class="btn btn-success btn-lg" href="/addAdmin" role="button">Admin</a>
+            <a class="btn btn-success btn-lg" href="/addDriver" role="button">Driver</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

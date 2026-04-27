@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %} Your Products {% endblock %}
+
+{% block content %}
+<div class="hero" style="background-image: url(static/Tomatoes2.jpg)">
+  <div class="heroText">
+   <h1 style="padding-top: 30px; padding-bottom: 30px;">Your Products</h1>
+  </div>
+</div>
+<div style="padding: 20px; background-color: #2E7F42;">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    {% for product in Products %}
+    {% if product.farmer_id == current_user.id %}
+    <div class="col">
+      <div class="card ourFarmersCard">
+        <img src="{{ url_for('static', filename=product.image) }}" class="card-img-top1 card-img-top"
+          alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5> <p>£{{ product.price }}</p>
+            <p>Quantity remaining: {{ product.amount }}</p>
+          <p>Farmer: {{ product.farmer.firstName }} {{ product.farmer.lastName }}</p>
+          <p class="card-text">{{ product.description }}</p>
+
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

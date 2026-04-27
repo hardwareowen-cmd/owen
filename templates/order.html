@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %} Checkout {% endblock title %}
+
+{% block content %}
+<div class="formBackground" style="background-image: url(static/FarmLand.jpg)" xmlns="http://www.w3.org/1999/html">
+    <div class="formPage">
+        <h1>Checkout</h1>
+<form action="{{ url_for('CompleteOrder') }}" method="POST">
+    <button type="submit" name="method" value="delivery" class="btn btn-success">
+        Delivery
+    </button>
+    <button type="submit" name="method" value="collection" class="btn btn-success">
+        Collection
+    </button>
+</form>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+        {% endwith %}
+    </div>
+</div>
+{% endblock %}

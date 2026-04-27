@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block title %} Farmer Dashboard {% endblock %}
+
+{% block content %}
+<div class="hero" style="background-image: url(static/Tomatoes2.jpg)">
+  <div class="heroText">
+    <h1>Hello,</h1>
+    <h1>{{ current_user.firstName }} {{ current_user.lastName }}</h1>
+  </div>
+</div>
+<div style="background-color: #2E7F42; padding-top: 20px; padding-bottom: 20px;">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <a href="/ComingSoon">
+          <div class="card customCard">
+            <div class="card-body">
+              <h3 class="card-title">Pending Orders</h3>
+            </div>
+            <img src="static/FoodDelivered.jpg" class="card-img-bottom card-img-bot" alt="...">
+          </div>
+        </a>
+      </div>
+      <div class="col">
+        <a href="/ComingSoon">
+          <div class="card customCard">
+            <div class="card-body">
+              <h3 class="card-title">Order History</h3>
+            </div>
+            <img src="static/MakingFood.jpg" class="card-img-bottom card-img-bot" alt="...">
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 20px">
+      <div class="col">
+        <a href="/addProduct">
+          <div class="card customCard">
+            <div class="card-body">
+              <h3 class="card-title">Add New Product</h3>
+            </div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-plus-circle-fill card-svg-bottom" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+      <div class="col">
+        <a href="/yourProducts">
+          <div class="card customCard">
+            <div class="card-body">
+              <h3 class="card-title">View Products</h3>
+            </div>
+            <img src="static/Tomatoes1.jpg" class="card-img-bottom card-img-bot" alt="...">
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 20px">
+      <div class="col">
+        <a href="/ComingSoon">
+          <div class="card customCard">
+            <div class="card-body">
+              <h3 class="card-title">Sales</h3>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-graph-up card-svg-bot" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+      <div class="col">
+        <a href="/ComingSoon">
+          <div class="card customCard">
+            <div class="card-body">
+              <h3 class="card-title">Account Information</h3>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-fill card-svg-bot" viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 20px">
+      <div class="col">
+        <a href="/logout">
+          <div class="card customCard">
+            <div class="card-body">
+              <h3 class="card-title">Logout</h3>
+            </div>
+              <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-box-arrow-right card-svg-bot" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+              </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

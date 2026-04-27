@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %} Our Farmers {% endblock %}
+
+{% block content %}
+<div style="background-color: #007657; color: white;">
+  <div class="container col-xl-8  py-1" >
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-4">
+      <img src="static/FarmerHoldingPlant.png" class="d-block img-fluid" alt="Bootstrap Themes" width="700" height="200" loading="lazy">
+    </div>
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold  lh-1 mb-3" style="color: white;">Our Farmers</h1>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique.</p>
+  </div>
+</div>
+  </div>
+</div>
+<div style="padding: 20px; background-color: #2E7F42;">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    {% for farmer in farmersData %}
+    <div class="col">
+      <div class="card ourFarmersCard">
+        <img src="{{ url_for('static', filename=farmer.profilePicture[7:]) }}" class="card-img-top1 card-img-top"
+          alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ farmer.firstName }} {{ farmer.lastName }}</h5>
+          <p class="card-text">{{ farmer.description }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

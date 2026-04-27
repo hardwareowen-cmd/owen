@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %} Our Products {% endblock %}
+
+{% block content %}
+<div class="hero" style="background-image: url(static/Tomatoes2.jpg)">
+  <div class="heroText">
+   <h1 style="padding-top: 30px; padding-bottom: 30px;">Our Products</h1>
+  </div>
+</div>
+<div style="padding: 20px; background-color: #2E7F42;">
+  <div class="row row-cols-1 row-cols-md-4 g-4" style="padding:20px;">
+    {% for product in Products %}
+    {% if product.active == 1 %}
+    <div class="col">
+      <div class="card customCard">
+        <img src="{{ url_for('static', filename=product.image) }}" class="card-img-top1 card-img-top"
+          alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5> <p>£{{ product.price }}</p>
+            <p>Quantity remaining: {{ product.amount }}</p>
+          <p>Farmer: {{ product.farmer.firstName }} {{ product.farmer.lastName }}</p>
+          <p class="card-text">{{ product.description }}</p>
+          <form action="{{ url_for('addToCart') }}" method="POST">
+            <label>Quantity</label>
+            <select class="form-select" name="quantity" style="margin-top; 10px; margin-bottom: 10px;">
+              {% for n in range(product.amount+1) %}
+                <option value="{{ n }}">{{ n }}</option>
+              {% endfor %}
+            </select>
+            <input type="hidden" name="product_id" value="{{ product.id }}">
+            <button type="submit" class="btn btn-success">Add to Cart</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    {% endif %}
+    {% endfor %}
+
+  </div>
+</div>
+
+{% endblock %}

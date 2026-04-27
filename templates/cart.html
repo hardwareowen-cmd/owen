@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %} Your Cart {% endblock title %}
+
+{% block content %}
+<div class="hero" style="background-image: url(static/Tomatoes2.jpg)">
+  <div class="heroText">
+    <h1>Your Cart</h1>
+  </div>
+</div>
+<div style="padding: 20px; background-color: #2E7F42;">
+    {% for item in cart %}
+        {%  for product in products %}
+            {% if product.id == item.item |int %}
+                    <div class="card cartCard" style="margin-top: 10px;">
+                      <h5 class="card-header">{{ product.name }}</h5>
+                        <div class="card-body">
+                            <h5 class="card-title">Farmer: {{ product.farmer.firstName }} {{ product.farmer.lastName }}</h5>
+                            <p class="card-text">Quantity: {{ item.quantity }}</p>
+                            <p>price per item: £{{ product.price }}</p>
+                            <p>total cost : £{{ product.price*item.quantity|int }}</p>
+                        </div>
+                    </div>
+
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+    <a class="btn btn-primary " href="/order" role="button" style="margin-top: 10px;">Complete Order</a>
+  </div>
+{% endblock %}

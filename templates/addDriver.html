@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% from 'bootstrap5/form.html' import render_form %}
+
+{% block title %} Add Driver {% endblock %}
+
+{% block content %}
+<div class="formBackground" style="background-image: url(static/FarmLand.jpg)">
+    <div class="formPage">
+        <h1>Add Driver</h1>
+        {{ render_form(form) }}
+        {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="notification is-danger">
+            {{ messages[0] }}
+        </div>
+    {% endif %}
+    {% endwith %}
+    </div>
+</div>
+{% endblock %}

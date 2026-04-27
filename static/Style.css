@@ -1,0 +1,122 @@
+.customnav {
+    background-color: #2F4858;
+    color: white
+}
+
+.hero {
+    min-height:250px;
+    background-size: cover;
+    padding: 30px 30px 5px 30px;
+}
+
+.heroText {
+    background-color: #2E7F42;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+    padding: 5px 30px 5px 30px;
+}
+
+.formBackground {
+    min-height:800px;
+    background-size: cover;
+    padding: 30px 30px 5px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formPage {
+    background-color: #2F4858;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 30px 30px 30px;
+    max-width: 267px
+}
+
+.footer {
+    background-color: #2F4858;
+    padding: 30px 30px 30px 30px;
+    color: white;
+}
+
+.customCard {
+
+    background-color: #006069;
+    color: white;
+    border-radius: 10px
+
+}
+
+.card-img-bot {
+    width: 100%;
+    height: 15em;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+}
+
+.card-svg-bot {
+    width: auto;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px
+}
+
+.SelectField1 {
+    width: 150%;
+}
+
+.Form1 {
+    width: 100%;
+}
+
+.ourFarmersCard {
+    height: 30em;
+    background-color: #006069;
+    color: white;
+    border-radius: 10px;
+}
+
+.card-img-top1 {
+    width: 100%;
+    height: 15em;
+    object-fit: contain;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
+.cartCard {
+    background-color: #006069;
+    color: white;
+    border-radius: 10px;
+}
+
+.homePage {
+    background-color: #007657;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 30px 30px 30px;
+
+}
+.homeBackground {
+    min-height:400px;
+    background-size: cover;
+    padding: 30px 30px 5px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

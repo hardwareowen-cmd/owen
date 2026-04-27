@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+
+{% block title %} Login {% endblock %}
+
+{% block content %}
+<div class="formBackground" style="background-image: url(static/FarmLand.jpg)">
+    <div class="formPage">
+        <h1>Login</h1>
+        {{ render_form(form) }}
+        {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="notification is-danger">
+            {{ messages[0] }}. Go to <a href="/signup">sign-up page</a>.
+        </div>
+    {% else %}
+        <div class="notification is-danger">
+            Not got an account yet. Go to <a href="/signup">sign-up page</a>.
+        </div>
+    {% endif %}
+    {% endwith %}
+    </div>
+</div>
+
+{% endblock %}
